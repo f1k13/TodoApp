@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Задача</title>
+</head>
+<body class="body">
+  <div class="tasks">
+    <div class="task">
+      <div class="theme" onclick="themeDarkWhite()">
+        <span>Переключить тему</span>
+      </div>
+      <input oninput="title()" id="createTitle" class="input-text" type="text" placeholder="Введите название задачи">
+      <input oninput="des()" id="createDescription" class="input-text" type="text" placeholder="Введите описание задачи">
+      <input id="time" type="time" class="time_input">
+      <div class="btn_text_add_value">
+        <div class="btn-add">
+          <button id="btn" onclick="addtask()" class="btn_text">Добавить задачу</button>
+        </div>
+    </div>
+  </div>
+</div>
+  <div id="taskUser" class="task_user">
+    <div id="newTask" class="input">
+    </div>
+  </div>
+</body>
+</html>

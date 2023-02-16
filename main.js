@@ -18,32 +18,32 @@ function addtask(){
   const des = document.getElementById('createDescription').value;
   const time = document.getElementById('time').value;
    
-  let $block = new DocumentFragment();
+  let block = new DocumentFragment();
 
-  const $div = document.createElement('div');
-  const $blockTitle = document.createElement('span');
-  const $blockDes = document.createElement('span');
-  const $blockTime = document.createElement('span');
-  const $blockDel = document.createElement('button');
+  const div = document.createElement('div');
+  const blockTitle = document.createElement('span');
+  const blockDes = document.createElement('span');
+  const blockTime = document.createElement('span');
+  const blockDel = document.createElement('button');
 
-  $div.classList.add('my-class');
-  $blockDel.classList.add('del');
-  $blockTime.innerHTML = `Время: ${time}`
-  $blockTitle.innerHTML = `Название: ${title}`
-  $blockDes.innerHTML = `Описание: ${des}`
-  $blockDel.innerHTML = `Удалить`
+  div.classList.add('my-class');
+  blockDel.classList.add('del');
+  blockTime.innerHTML = `Время: ${time}`
+  blockTitle.innerHTML = `Название: ${title}`
+  blockDes.innerHTML = `Описание: ${des}`
+  blockDel.innerHTML = `Удалить`
 
-  $div.appendChild($blockTime);
-  $div.appendChild($blockTitle);
-  $div.appendChild($blockDes);
-  $div.appendChild($blockDel);
-  $blockDel.addEventListener('click',() =>{
+  div.appendChild(blockTime);
+  div.appendChild(blockTitle);
+  div.appendChild(blockDes);
+  div.appendChild(blockDel);
+  blockDel.addEventListener('click',() =>{
     $div.remove();
   }
   );
   
-  $block.appendChild($div);
-  document.querySelector('#newTask').append($block);
+  block.appendChild(div);
+  document.querySelector('#newTask').append(block);
 
   
   
